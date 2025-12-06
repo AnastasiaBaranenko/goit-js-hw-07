@@ -5,7 +5,7 @@ let button = document.querySelector('.change-color');
 button.addEventListener('click', event => {
   const changeColor = getRandomHexColor();
   colorEl.style.backgroundColor = changeColor;
-  color.style.color = changeColor;
+  color.textContent = changeColor;
 });
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
