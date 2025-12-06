@@ -3,7 +3,9 @@ const textEl = document.querySelector('#name-output');
 text.addEventListener('input', event => {
   const valueEl = text.value.trim();
 
-  if (valueEl === '' || valueEl === ' ') {
-    return 'Anonymous';
+  textEl.textContent = valueEl;
+
+  if (valueEl === '') {
+    return (textEl.textContent = `Anonymous`);
   }
 });

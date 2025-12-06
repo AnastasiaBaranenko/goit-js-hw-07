@@ -26,6 +26,9 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
+
+const fragmentEl = document.createDocumentFragment();
+
 images.forEach(imgEl => {
   const item = document.createElement('li');
   const pictures = document.createElement('img');
@@ -33,6 +36,7 @@ images.forEach(imgEl => {
   pictures.alt = imgEl.alt;
 
   item.append(pictures);
-  gallery.append(item);
-  console.log(gallery);
+  fragmentEl.append(item);
 });
+gallery.append(fragmentEl);
+console.log(gallery);
